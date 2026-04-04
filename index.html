@@ -9,11 +9,19 @@
         .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
         header { text-align: center; padding: 3rem 0; background: #2c3e50; color: white; border-radius: 8px; margin-bottom: 2rem; }
         h1 { margin: 0; }
-        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
         .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         h2 { color: #2980b9; }
         ul { padding-left: 1.5rem; }
+        .contact { text-align: center; }
+        .contact a { display: inline-block; padding: 0.8rem 1.5rem; background: #27ae60; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
         footer { text-align: center; margin-top: 3rem; color: #777; }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .features { grid-template-columns: 1fr; }
+            .container { padding: 1rem; }
+        }
     </style>
 </head>
 <body>
@@ -42,6 +50,12 @@
                     <li><strong>Control:</strong> Solución auto-alojada para máxima privacidad y personalización.</li>
                 </ul>
             </div>
+        </section>
+
+        <section class="card contact">
+            <h2>¿Interesado en trabajar juntos?</h2>
+            <p>No dudes en contactarme para cualquier consulta o proyecto:</p>
+            <a href="mailto:salazarcode@gmail.com">salazarcode@gmail.com</a>
         </section>
 
         <footer>
