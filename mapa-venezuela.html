@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interactivo de Venezuela - Arquitectura Geoespacial | SalazarCode</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="brand-link">
+        <span class="brand-logo">⚡</span>
+        <span class="brand-name">SalazarCode</span>
+        <span class="brand-badge">DevOps & IA</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/legal-rag.html" class="nav-link">Legal RAG</a>
+        <a href="/mapa-venezuela.html" class="nav-link active">Mapa Venezuela</a>
+        <a href="https://mapa.salazarcode.net" target="_blank" rel="noopener" class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;">
+          Abrir Mapa ↗
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- ENCABEZADO DE DETALLE -->
+    <div class="page-detail-header">
+      <a href="/" class="back-link">← Volver al catálogo de proyectos</a>
+
+      <div class="detail-title-group">
+        <div class="detail-badge-row">
+          <span class="subdomain-tag">🌐 mapa.salazarcode.net</span>
+          <span class="tech-pill highlight">D3.js v7 Vectorial</span>
+          <span class="tech-pill green">En Línea</span>
+          <span class="tech-pill">Single-File Bundle</span>
+        </div>
+
+        <h1 class="detail-h1">Mapa Interactivo de Venezuela</h1>
+        <p class="detail-lead">
+          Visualizador cartográfico web interactivo con navegación jerárquica multinivel (País ➔ Estado ➔ Municipio ➔ Parroquia).
+          Construido con D3.js y Vite, optimizado en un único archivo autónomo de carga instantánea.
+        </p>
+      </div>
+
+      <div class="detail-actions-bar">
+        <a href="https://mapa.salazarcode.net" target="_blank" rel="noopener" class="btn-primary">
+          🗺️ Explorar Mapa en mapa.salazarcode.net ↗
+        </a>
+        <a href="https://github.com/salazarcode/mapa-venezuela" target="_blank" rel="noopener" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Código Fuente en GitHub ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 1: CAPACIDADES CARTOGRÁFICAS -->
+    <section class="tech-spec-section">
+      <div class="section-header">
+        <span class="section-tag">Alcance & Cobertura</span>
+        <h2 class="section-title">Jerarquía Político-Territorial Exhaustiva</h2>
+        <p class="section-desc">Estructura piramidal con drill-down interactivo y delimitación geográfica oficial.</p>
+      </div>
+
+      <div class="spec-grid-2col">
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">📍</span>
+            <h3 class="spec-card-title">Niveles Administrativos (Adm 0 a Adm 3)</h3>
+          </div>
+          <p class="spec-card-desc">
+            Permite navegar de lo macro a lo micro sin perder contexto espacial ni fluidez visual:
+          </p>
+          <ul class="spec-list">
+            <li><span class="check-icon">✓</span> <strong>Nivel 0 (Nacional):</strong> País completo, incluyendo la visualización de la Guayana Esequiba.</li>
+            <li><span class="check-icon">✓</span> <strong>Nivel 1 (Estadal):</strong> 25 entidades federales (24 Estados + Dependencias Federales).</li>
+            <li><span class="check-icon">✓</span> <strong>Nivel 2 (Municipal):</strong> 335 Municipios con cálculo dinámico de centroides.</li>
+            <li><span class="check-icon">✓</span> <strong>Nivel 3 (Parroquial):</strong> 1.136 Parroquias con tooltips y códigos oficiales.</li>
+          </ul>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">🌐</span>
+            <h3 class="spec-card-title">Fuentes de Datos Geoespaciales</h3>
+          </div>
+          <p class="spec-card-desc">
+            Las capas vectoriales se basan en información estandarizada de ayuda humanitaria y cartografía oficial:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Estándar OCHA / ONU:</strong> Integración de P-Codes (Place Codes) reconocidos internacionalmente.</li>
+            <li><strong>Polígonos Simplificados:</strong> Reducción de peso sin pérdida de contornos costeros ni fronterizos.</li>
+            <li><strong>Corrección con @turf/rewind:</strong> Orientación estándar de anillos exteriores e interiores para polígonos SVG.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: ARQUITECTURA TÉCNICA -->
+    <section class="tech-spec-section">
+      <div class="section-header">
+        <span class="section-tag">Detalles Técnicos</span>
+        <h2 class="section-title">Ingeniería de Software & Renderizado</h2>
+        <p class="section-desc">Optimización extrema de rendimiento vectorial en el cliente.</p>
+      </div>
+
+      <div class="spec-grid-2col">
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">📊</span>
+            <h3 class="spec-card-title">Proyección Mercator & Render D3.js</h3>
+          </div>
+          <p class="spec-card-desc">
+            Uso intensivo de las librerías matemáticas de <code>D3-geo</code> y <code>D3-zoom</code>:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Proyección:</strong> <code>d3.geoMercator()</code> adaptada al centroide y escala de las coordenadas venezolanas.</li>
+            <li><strong>Zoom Inteligente:</strong> Cálculo de <code>path.bounds(feature)</code> para centrar la cámara con transiciones SVG suaves.</li>
+            <li><strong>Sincronización Bidireccional:</strong> Hover simultáneo entre los polígonos del mapa y la lista lateral de entidades.</li>
+          </ul>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">📦</span>
+            <h3 class="spec-card-title">Arquitectura Single-File Bundle</h3>
+          </div>
+          <p class="spec-card-desc">
+            Todo el código JavaScript, CSS y los GeoJSON de más de mil parroquias se compilan en un único archivo:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Vite Singlefile:</strong> Genera un único <code>dist/index.html</code> auto-contenido de carga ultra-rápida.</li>
+            <li><strong>Zero Latency:</strong> No requiere peticiones fetch subsecuentes al servidor para cambiar de estado o nivel.</li>
+            <li><strong>Despliegue Simple:</strong> Contenedor Nginx Alpine ultraligero que consume menos de 10 MB de RAM.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <div class="callout-banner">
+      <h2 class="callout-title">Explora la Geografía de Venezuela de Forma Interactiva</h2>
+      <p class="callout-desc">
+        Navega entre estados, municipios y parroquias con transiciones vectoriales SVG fluidas y de alta definición.
+      </p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://mapa.salazarcode.net" target="_blank" rel="noopener" class="btn-primary" style="font-size: 1rem; padding: 12px 24px;">
+          🗺️ Abrir mapa.salazarcode.net ↗
+        </a>
+        <a href="https://github.com/salazarcode/mapa-venezuela" target="_blank" rel="noopener" class="btn-secondary" style="font-size: 1rem; padding: 12px 24px;">
+          Ver Código en GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span>&copy; 2026 SalazarCode.net • Infraestructura Hardened con Docker, Nginx y Let's Encrypt</span>
+      <div class="footer-links">
+        <a href="/" class="footer-link">Inicio</a>
+        <a href="https://legal.salazarcode.net" class="footer-link">Legal RAG</a>
+        <a href="https://mapa.salazarcode.net" class="footer-link">Mapa Venezuela</a>
+        <a href="https://github.com/salazarcode" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

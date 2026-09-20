@@ -1,0 +1,15 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: salazarcode-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - /var/www/salazarcode.net:/usr/share/nginx/html:ro
+      - ./docker/conf/default.conf:/etc/nginx/conf.d/default.conf:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

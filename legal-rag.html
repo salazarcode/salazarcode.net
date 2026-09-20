@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal RAG Venezuela - Arquitectura & Detalles Técnicos | SalazarCode</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="brand-link">
+        <span class="brand-logo">⚡</span>
+        <span class="brand-name">SalazarCode</span>
+        <span class="brand-badge">DevOps & IA</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/legal-rag.html" class="nav-link active">Legal RAG</a>
+        <a href="/mapa-venezuela.html" class="nav-link">Mapa Venezuela</a>
+        <a href="https://legal.salazarcode.net" target="_blank" rel="noopener" class="btn-primary" style="padding: 6px 14px; font-size: 0.8rem;">
+          Abrir App ↗
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- ENCABEZADO DE DETALLE -->
+    <div class="page-detail-header">
+      <a href="/" class="back-link">← Volver al catálogo de proyectos</a>
+
+      <div class="detail-title-group">
+        <div class="detail-badge-row">
+          <span class="subdomain-tag">🌐 legal.salazarcode.net</span>
+          <span class="tech-pill purple">RAG de Alta Precisión</span>
+          <span class="tech-pill green">En Línea</span>
+          <span class="tech-pill highlight">Multi-Stage Docker</span>
+        </div>
+
+        <h1 class="detail-h1">Legal RAG Venezuela</h1>
+        <p class="detail-lead">
+          Sistema de recuperación semántica aumentada por generación (RAG) especializado en la legislación venezolana.
+          Diseñado para erradicar las alucinaciones de la IA tradicional mediante la recuperación vectorial de artículos normativos
+          oficiales y síntesis analítica fundamentada en tiempo real.
+        </p>
+      </div>
+
+      <div class="detail-actions-bar">
+        <a href="https://legal.salazarcode.net" target="_blank" rel="noopener" class="btn-primary btn-purple">
+          ⚖️ Probar Aplicación en legal.salazarcode.net ↗
+        </a>
+        <a href="https://github.com/salazarcode/legal-rag-venezuela" target="_blank" rel="noopener" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Código Fuente en GitHub ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 1: PROBLEMA Y SOLUCIÓN -->
+    <section class="tech-spec-section">
+      <div class="section-header">
+        <span class="section-tag">Objetivo del Proyecto</span>
+        <h2 class="section-title">El Reto: Precisión Absoluta en Respuestas Jurídicas</h2>
+        <p class="section-desc">Por qué los modelos de lenguaje generales fallan al interpretar leyes venezolanas y cómo lo resuelve este RAG.</p>
+      </div>
+
+      <div class="spec-grid-2col">
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">⚠️</span>
+            <h3 class="spec-card-title">Limitación de los LLMs Genéricos</h3>
+          </div>
+          <p class="spec-card-desc">
+            Cuando se le pregunta a ChatGPT o Claude sobre un artículo específico de la Constitución de 1999 o del Código Civil venezolano, el modelo recurre a memoria probabilística, lo que genera alucinaciones críticas, mezcla de leyes de otros países (México, España) o citas de artículos derogados.
+          </p>
+          <ul class="spec-list">
+            <li><span class="check-icon">✕</span> Invención de números de artículos inexistentes.</li>
+            <li><span class="check-icon">✕</span> Mezcla de legislación venezolana con doctrina extranjera.</li>
+            <li><span class="check-icon">✕</span> Falta de certeza para abogados, auditores y aseguradoras.</li>
+          </ul>
+        </div>
+
+        <div class="spec-card" style="border-color: rgba(16, 185, 129, 0.4);">
+          <div class="spec-card-header">
+            <span class="spec-icon">🛡️</span>
+            <h3 class="spec-card-title">La Solución: Recuperación Vectorial Estricta</h3>
+          </div>
+          <p class="spec-card-desc">
+            Legal RAG no permite que la IA invente. Primero convierte la consulta en un vector denso, recupera de PostgreSQL los artículos oficiales exactos con mayor similitud semántica y fuerza al LLM a fundamentar cada afirmación citando obligatoriamente la norma, capítulo y artículo.
+          </p>
+          <ul class="spec-list">
+            <li><span class="check-icon">✓</span> Trazabilidad legal 100% verificable contra la Gaceta Oficial.</li>
+            <li><span class="check-icon">✓</span> Respuestas objetivas, desprovistas de opiniones o sesgos.</li>
+            <li><span class="check-icon">✓</span> Visor de artículos de respaldo accesibles al usuario con un clic.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: DESGLOSE DE ARQUITECTURA TÉCNICA -->
+    <section class="tech-spec-section">
+      <div class="section-header">
+        <span class="section-tag">Deep-Dive Técnico</span>
+        <h2 class="section-title">Arquitectura de Componentes & Pipeline</h2>
+        <p class="section-desc">Cada capa fue diseñada bajo estándares de seguridad corporativa, baja latencia y soberanía de datos.</p>
+      </div>
+
+      <div class="spec-grid-2col">
+        <!-- 1. Chunking Jerárquico -->
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">📑</span>
+            <h3 class="spec-card-title">1. Parser Jerárquico & Ingesta</h3>
+          </div>
+          <p class="spec-card-desc">
+            A diferencia de los segmentadores por cantidad fija de tokens (que cortan artículos a la mitad), nuestro motor implementa un parser sintáctico de documentos jurídicos en C#:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Preservación de Estructura:</strong> Reconoce Títulos, Capítulos, Secciones, Artículos y Epígrafes.</li>
+            <li><strong>Inyección de Contexto:</strong> Cada chunk vectorial almacena la ruta completa (ej. <code>Ley de Seguros &gt; TÍTULO II &gt; Capítulo I &gt; Art. 6</code>).</li>
+            <li><strong>Extracción Robusta:</strong> Uso de <code>PdfPig</code> para procesamiento de PDFs con caracteres especiales y dobles columnas.</li>
+          </ul>
+        </div>
+
+        <!-- 2. Embeddings Locales Ollama -->
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">🦙</span>
+            <h3 class="spec-card-title">2. Embeddings Locales en Ollama</h3>
+          </div>
+          <p class="spec-card-desc">
+            La vectorización de las leyes y de las preguntas no depende de OpenAI ni de servicios externos de terceros:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Modelo:</strong> <code>nomic-embed-text</code> (768 dimensiones).</li>
+            <li><strong>Privacidad:</strong> Los textos jurídicos nunca salen del VPS para ser embebidos.</li>
+            <li><strong>Rendimiento:</strong> Vectorización en menos de 100 ms por consulta dentro de la red privada de Docker.</li>
+          </ul>
+        </div>
+
+        <!-- 3. Base de Datos pgvector HNSW -->
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">🐘</span>
+            <h3 class="spec-card-title">3. PostgreSQL 16 + pgvector HNSW</h3>
+          </div>
+          <p class="spec-card-desc">
+            Almacenamiento de vectores de alta dimensionalidad con índices aproximados de vecinos más cercanos (ANN):
+          </p>
+          <ul class="spec-list">
+            <li><strong>Índice HNSW:</strong> <code>vector_cosine_ops</code> con parámetros optimizados <code>m=16</code>, <code>ef_construction=64</code>.</li>
+            <li><strong>Operador Coseno:</strong> Búsqueda ultrarrápida mediante el operador <code>&lt;=&gt;</code> nativo en C/PostgreSQL.</li>
+            <li><strong>Latencia de consulta:</strong> Entre 40 y 180 ms para buscar entre más de 2.800 artículos vectorizados.</li>
+          </ul>
+        </div>
+
+        <!-- 4. Backend Web API .NET 8 -->
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">⚙️</span>
+            <h3 class="spec-card-title">4. ASP.NET Core 8 Web API</h3>
+          </div>
+          <p class="spec-card-desc">
+            El cerebro orquestador que gestiona la seguridad, el rate limiting y el streaming en tiempo real:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Streaming SSE:</strong> Eventos Server-Sent (<code>text/event-stream</code>) para transmitir token a token (TTFT &lt; 1s).</li>
+            <li><strong>Rate Limiting Sliding Window:</strong> 30 req/min para búsquedas y 5 intentos/min para login por IP.</li>
+            <li><strong>Anti-Injection Guard:</strong> Sanitización activa de queries para neutralizar jailbreaks y fuga de prompts.</li>
+          </ul>
+        </div>
+
+        <!-- 5. Frontend Angular 18 -->
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">🅰️</span>
+            <h3 class="spec-card-title">5. Frontend Conversacional (Angular 18)</h3>
+          </div>
+          <p class="spec-card-desc">
+            Experiencia de usuario de última generación inspirada en las principales plataformas de IA conversacional:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Chat tipo ChatGPT:</strong> Caja de entrada inferior fija, preguntas del usuario y respuestas IA a la izquierda.</li>
+            <li><strong>Diálogo Multi-turno:</strong> Mantiene la memoria conversacional en la sesión activa para preguntas de seguimiento.</li>
+            <li><strong>Límite Adaptativo:</strong> 5 preguntas en modo público y preguntas ilimitadas para usuarios autenticados.</li>
+            <li><strong>Telemetría en Modal:</strong> Medición en vivo del tiempo total, TTFT, latencia de Ollama y de Postgres.</li>
+          </ul>
+        </div>
+
+        <!-- 6. Microsoft Entra ID (Azure AD) -->
+        <div class="spec-card">
+          <div class="spec-card-header">
+            <span class="spec-icon">🔐</span>
+            <h3 class="spec-card-title">6. Autenticación Microsoft Entra ID</h3>
+          </div>
+          <p class="spec-card-desc">
+            Seguridad corporativa para el control de acceso administrativo e ingesta de nuevas normas:
+          </p>
+          <ul class="spec-list">
+            <li><strong>Estándar OAuth 2.0 PKCE:</strong> Autenticación moderna con <code>@azure/msal-angular</code> y <code>@azure/msal-browser</code>.</li>
+            <li><strong>Claims Transformation:</strong> Transformación de tokens JWT en el backend para validar claims de administración.</li>
+            <li><strong>Rutas Protegidas:</strong> Ingesta de PDFs y cambio de modelos protegidos bajo políticas <code>[Authorize(Roles = "Admin")]</code>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGRAMA DE DOCKER COMPOSE -->
+    <section class="tech-spec-section">
+      <div class="section-header">
+        <span class="section-tag">Infraestructura & Contenedores</span>
+        <h2 class="section-title">Topología Docker Compose en el Servidor</h2>
+        <p class="section-desc">Todos los servicios se ejecutan de manera aislada en una red bridge interna sin exponer la base de datos al exterior.</p>
+      </div>
+
+      <div class="code-box">
+<span class="comment"># Topología de red interna: salazarcode.net</span>
+<span class="cmd">[Internet / Usuario]</span> ➔ <span class="cmd">[Nginx Host: 443 SSL]</span> ➔ proxy_pass ➔ <span class="cmd">[legal_rag_frontend: 8090 (Nginx + Angular)]</span>
+                                                                             │
+                                              proxy_pass /api/               ▼
+                                                                <span class="cmd">[legal_rag_backend: 5000 (.NET 8 Web API)]</span>
+                                                                             ├──➔ <span class="cmd">[legal_rag_postgres: 5432 (pgvector)]</span>
+                                                                             └──➔ <span class="cmd">[legal_rag_ollama: 11434 (Embeddings)]</span>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <div class="callout-banner">
+      <h2 class="callout-title">Experimenta la Consulta Jurídica en Tiempo Real</h2>
+      <p class="callout-desc">
+        Interactúa con la Constitución, el Código Civil y la Ley del Contrato de Seguro mediante búsqueda semántica de alta fidelidad.
+      </p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://legal.salazarcode.net" target="_blank" rel="noopener" class="btn-primary btn-purple" style="font-size: 1rem; padding: 12px 24px;">
+          🚀 Abrir legal.salazarcode.net ↗
+        </a>
+        <a href="https://github.com/salazarcode/legal-rag-venezuela" target="_blank" rel="noopener" class="btn-secondary" style="font-size: 1rem; padding: 12px 24px;">
+          Explorar Código en GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span>&copy; 2026 SalazarCode.net • Infraestructura Hardened con Docker, Nginx y Let's Encrypt</span>
+      <div class="footer-links">
+        <a href="/" class="footer-link">Inicio</a>
+        <a href="https://legal.salazarcode.net" class="footer-link">Legal RAG</a>
+        <a href="https://mapa.salazarcode.net" class="footer-link">Mapa Venezuela</a>
+        <a href="https://github.com/salazarcode" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,66 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a salazarcode.net</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: #f4f7f6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-        header { text-align: center; padding: 3rem 0; background: #2c3e50; color: white; border-radius: 8px; margin-bottom: 2rem; }
-        h1 { margin: 0; }
-        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #2980b9; }
-        ul { padding-left: 1.5rem; }
-        .contact { text-align: center; }
-        .contact a { display: inline-block; padding: 0.8rem 1.5rem; background: #27ae60; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        footer { text-align: center; margin-top: 3rem; color: #777; }
-
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .features { grid-template-columns: 1fr; }
-            .container { padding: 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalazarCode.net - Código, Servidores y Automatización</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>salazarcode.net</h1>
-            <p>Automatizando el futuro con tecnología de punta.</p>
-        </header>
-
-        <section class="features">
-            <div class="card">
-                <h2>.NET</h2>
-                <p>La base robusta para nuestras soluciones backend.</p>
-                <ul>
-                    <li><strong>Alto rendimiento:</strong> Ejecución rápida y eficiente.</li>
-                    <li><strong>Seguridad:</strong> Ecosistema maduro y probado en entornos empresariales.</li>
-                    <li><strong>Versatilidad:</strong> Desarrollo cross-platform moderno con ASP.NET Core.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2>n8n</h2>
-                <p>El motor visual para nuestras automatizaciones.</p>
-                <ul>
-                    <li><strong>Flujos visuales:</strong> Diseña procesos complejos sin complicaciones.</li>
-                    <li><strong>Integración total:</strong> Conecta cientos de servicios API rápidamente.</li>
-                    <li><strong>Control:</strong> Solución auto-alojada para máxima privacidad y personalización.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="card contact">
-            <h2>¿Interesado en trabajar juntos?</h2>
-            <p>No dudes en contactarme para cualquier consulta o proyecto:</p>
-            <a href="mailto:salazarcode@gmail.com">salazarcode@gmail.com</a>
-        </section>
-
-        <footer>
-            <p>Construyendo automatizaciones inteligentes.</p>
-        </footer>
+  <!-- NAVBAR -->
+  <header class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="brand-link">
+        <span class="brand-logo">⚡</span>
+        <span class="brand-name">SalazarCode</span>
+        <span class="brand-badge">Servidor Hardened</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/" class="nav-link active">Inicio</a>
+        <a href="/legal-rag.html" class="nav-link">Legal RAG</a>
+        <a href="/mapa-venezuela.html" class="nav-link">Mapa Venezuela</a>
+        <a href="https://github.com/salazarcode" target="_blank" rel="noopener" class="nav-link">GitHub ↗</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-pill">
+        <span class="status-dot"></span>
+        Infraestructura Cloud &amp; Microservicios en Producción
+      </div>
+
+      <h1 class="hero-title">
+        Código, Servidores &amp; <br>
+        <span class="hero-title-accent">Inteligencia Artificial</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Plataforma personal de proyectos de ingeniería de software, modelos RAG de alta precisión y arquitecturas contenerizadas sobre servidores Linux hardened.
+      </p>
+
+      <!-- BADGES DE INFRAESTRUCTURA -->
+      <div class="infra-badges-row">
+        <span class="infra-badge">🔒 UFW &amp; Fail2ban Hardened</span>
+        <span class="infra-badge">🐳 Docker &amp; Docker Compose</span>
+        <span class="infra-badge">🌐 Nginx Reverse Proxy (SSL)</span>
+        <span class="infra-badge">🐘 PostgreSQL 16 + pgvector</span>
+        <span class="infra-badge">🦙 Ollama Local AI</span>
+        <span class="infra-badge">⚡ Streaming SSE</span>
+      </div>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section>
+      <div class="section-header">
+        <span class="section-tag">Proyectos Activos</span>
+        <h2 class="section-title">Soluciones en Producción</h2>
+        <p class="section-desc">Aplicaciones desplegadas en subdominios independientes de este servidor.</p>
+      </div>
+
+      <div class="projects-showcase-grid">
+
+        <!-- PROYECTO 1: LEGAL RAG (DESTACADO PRINCIPAL) -->
+        <article class="project-card featured">
+          <div class="card-top-meta">
+            <span class="subdomain-tag">🌐 legal.salazarcode.net</span>
+            <span class="featured-ribbon">⭐ Proyecto Destacado</span>
+          </div>
+
+          <div class="card-title-group">
+            <h3 class="card-title">Legal RAG Venezuela</h3>
+            <p class="card-lead">
+              Asistente conversacional de inteligencia artificial y recuperación semántica de alta precisión especializado en la legislación venezolana.
+              Elimina las alucinaciones de los LLMs mediante citas obligatorias del articulado legal en tiempo real.
+            </p>
+          </div>
+
+          <div class="tech-pills-list">
+            <span class="tech-pill purple">.NET 8 C# Web API</span>
+            <span class="tech-pill purple">PostgreSQL 16 (pgvector HNSW)</span>
+            <span class="tech-pill purple">Ollama (nomic-embed-text)</span>
+            <span class="tech-pill highlight">Angular 18 Standalone</span>
+            <span class="tech-pill">Streaming SSE (TTFT &lt; 1s)</span>
+            <span class="tech-pill green">Microsoft Entra ID (Azure AD)</span>
+            <span class="tech-pill">Docker Compose (4 Microservicios)</span>
+          </div>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">⚖️</span>
+              <div>
+                <strong>Fundamentación Estricta:</strong> Consulta directa de la Constitución de 1999, Código Civil, Ley de Seguros y leyes financieras indexadas.
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <div>
+                <strong>Búsqueda Vectorial HNSW:</strong> Recuperación semántica por distancia coseno en menos de 150 ms con embeddings calculados 100% en local.
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon">💬</span>
+              <div>
+                <strong>UI Conversacional Tipo ChatGPT:</strong> Diálogo continuo multi-turno con memoria de sesión, telemetría de latencia en vivo y selector de fuentes.
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon">🛡️</span>
+              <div>
+                <strong>Seguridad Anti-Inyecciones:</strong> Sanitización activa de prompts, rate limiting sliding window por IP y control de acceso OAuth 2.0 PKCE.
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions-row">
+            <a href="/legal-rag.html" class="btn-primary btn-purple">
+              ⚡ Ver Arquitectura y Detalles Técnicos →
+            </a>
+            <a href="https://legal.salazarcode.net" target="_blank" rel="noopener" class="btn-secondary">
+              ⚖️ Abrir Aplicación (legal.salazarcode.net) ↗
+            </a>
+            <a href="https://github.com/salazarcode/legal-rag-venezuela" target="_blank" rel="noopener" class="btn-github">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: MAPA INTERACTIVO -->
+        <article class="project-card">
+          <div class="card-top-meta">
+            <span class="subdomain-tag">🌐 mapa.salazarcode.net</span>
+            <span class="tech-pill green">Visualización Geoespacial</span>
+          </div>
+
+          <div class="card-title-group">
+            <h3 class="card-title">Mapa Interactivo de Venezuela</h3>
+            <p class="card-lead">
+              Visualizador web cartográfico interactivo con navegación jerárquica multinivel (País ➔ Estado ➔ Municipio ➔ Parroquia).
+              Renderizado vectorial de alta definición sin pérdida de resolución al hacer zoom.
+            </p>
+          </div>
+
+          <div class="tech-pills-list">
+            <span class="tech-pill highlight">D3.js (d3-geo &amp; d3-zoom)</span>
+            <span class="tech-pill highlight">GeoJSON Estandarizado (OCHA / ONU)</span>
+            <span class="tech-pill">Vite Singlefile</span>
+            <span class="tech-pill">SVG Dinámico</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">Docker Nginx</span>
+          </div>
+
+          <div class="card-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">📍</span>
+              <div>
+                <strong>Cobertura Total:</strong> 25 entidades federales (incluyendo Dependencias Federales), 335 municipios y 1.136 parroquias, con inclusión de la Guayana Esequiba.
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon">🗺️</span>
+              <div>
+                <strong>Drill-down Progresivo:</strong> Transición visual fluida entre niveles administrativos con cálculo de centroides y bounding boxes geográficos.
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon">🔄</span>
+              <div>
+                <strong>Sincronización Bidireccional:</strong> Hover simultáneo entre los polígonos vectoriales del mapa y la lista lateral de entidades.
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon">📦</span>
+              <div>
+                <strong>Zero-Latency Bundle:</strong> Todo el mapa y los datos se compilan en un único archivo autónomo de carga inmediata.
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions-row">
+            <a href="/mapa-venezuela.html" class="btn-primary">
+              📊 Ver Arquitectura y Detalles Técnicos →
+            </a>
+            <a href="https://mapa.salazarcode.net" target="_blank" rel="noopener" class="btn-secondary">
+              🗺️ Explorar Mapa (mapa.salazarcode.net) ↗
+            </a>
+            <a href="https://github.com/salazarcode/mapa-venezuela" target="_blank" rel="noopener" class="btn-github">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ESTADO DEL SERVIDOR -->
+    <section style="margin-top: 50px;">
+      <div class="spec-card" style="text-align: center; max-width: 520px; margin: 0 auto;">
+        <div class="spec-card-header" style="justify-content: center;">
+          <span class="status-dot"></span>
+          <h3 class="spec-card-title">Estado del Servidor VPS</h3>
+        </div>
+        <p class="spec-card-desc">
+          Servidor aprovisionado con configuración hardened (Ubuntu 24.04 LTS, Docker Engine, UFW, Fail2ban, SSH Port 2222 con llaves RSA/Ed25519).
+        </p>
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-green);">
+          ✅ Todos los servicios y contenedores en línea y operativos
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span>&copy; 2026 SalazarCode.net • Código, Servidores y Automatización</span>
+      <div class="footer-links">
+        <a href="/" class="footer-link">Inicio</a>
+        <a href="/legal-rag.html" class="footer-link">Legal RAG</a>
+        <a href="/mapa-venezuela.html" class="footer-link">Mapa Venezuela</a>
+        <a href="https://github.com/salazarcode" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
